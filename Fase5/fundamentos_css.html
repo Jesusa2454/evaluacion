@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desing</title>
+    <Link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header class="menu3">
+        <img src="img/logo2.png" alt="logo">
+        <h1> Univercidad abierta y a distancia                        Fundamentos de CSS  y fundamentos de Frameworks CSS </h1>
+       
+        <img src="img/logo3.png" alt="logoderecho">
+    </header>,
+        
+    <nav >
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li>Temas
+                <ul>
+                    <li><a href="fundamentos_css.html">Fundamentos de CSS </a></li>
+                    <li><a href="Frameworks_CSS.html"> Frameworks CSS</a></li>
+                </ul>
+            </li>
+            <li>Recursos Digitales
+                <ul>
+                    <li><a href="Ludotecacss.html"> Fundamentos de CSS</a></li>
+                    <li><a href="Ludotecaframeworks.html"> Ludoteca de Frameworks CSS</a></li>
+                    
+                </ul>
+            </li>
+
+
+            <li>Aprendizaje
+                <ul>
+                    <li><a href="Actividad_com_Fun_CSS.html"> Activadad de comprencion Fundamentos de CSS</a></li>
+                    <li><a href="Actividad_com_fram_CSS.html"> Activadad de comprencion Frameworks CSS</a></li>
+                </ul>
+            </li>
+
+            <li><a href="Autor.html"> Autor</a></li>>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <p>
+                En el precente sito  tiene la  finalidad de inciar el mundo de la
+                 Programacion de sitios wed  haceindo uso de codigo HTLM 5 y realizando
+                 el uso de Fundamentos de CSS y  Frameworks CSS.
+    
+            </p>
+            
+            <Article>
+                <h3>Fundamentos de CSS</h3>
+                <P>
+                    Sintaxis y estructura de una instrucción.
+                    Las hojas de estilo constan de una serie de instrucciones que definen
+                    cómo se han de representar determinados elementos de página con etiquetas HTML.
+
+                    Antes de que se generalizara el uso de CSS, los diseñadores de páginas web utilizaban etiquetas HTML especiales para modificar el aspecto de los elementos de la página. El siguiente ejemplo muestra una página HTML con estilos definidos sin utilizar CSS:
+
+                    El ejemplo que vemos utiliza la etiqueta font con sus atributos color, face y size para definir el color, el tipo y el tamaño de letra de cada elemento de la página.
+
+                    El problema de utilizar este método para definir el aspecto de los elementos se puede ver claramente con el siguiente ejemplo: si la página tuviera 50 elementos diferentes, habría que insertar 50 etiquetas "font". Si el sitio web entero se compone de 10.000 páginas diferentes, habría que definir 500.000 etiquetas "font". Como cada etiqueta "font" tiene tres atributos, habría que definir 1.5 millones de atributos.
+
+                    Como el diseño de los sitios web está en constante evolución, es habitual modificar cada cierto tiempo el aspecto de las páginas del sitio. Siguiendo con el ejemplo anterior, cambiar el aspecto del sitio requeriría modificar 500.000 etiquetas y 1.5 millones de atributos.
+                    CSS permite separar los contenidos de la página y la información sobre su aspecto. En el ejemplo anterior, dentro de la propia página HTML se crea una zona especial en la que se incluye toda la información relacionada con los estilos de la página.
+
+                    
+                    Utilizando CSS, se pueden establecer los mismos estilos con menos esfuerzo y sin ensuciar el código HTML de los contenidos con etiquetas "font". Como se verá más adelante, la etiqueta "style" crea una zona especial donde se incluyen todas las reglas CSS que se aplican en la página.
+                    
+
+                    Separando la estructura del estilo
+                   Veamos un pequeño ejemplo de la elegancia y efectividad de CSS. Hasta ahora había que asignar indicaciones sobre la fuente mediante atributos HTML,  por ejemplo así:
+
+                   
+                </P>
+                <h3><font face=”Arial” size=”5” color=”#454545”>Un texto cualquiera</font></h3>
+                 <P>
+                   Incluso hay editores que hacen lo siguiente con esa instrucción:
+                </P>
+                   <h3><font face=”Arial”><font size=”5”><font color=”#454545”>Un texto cualquiera</font></font></h3>
+                <P>
+                    Como si no fuera bastante, la instrucción se tenía que repetir x veces para que incluyera todas las líneas de texto. En el futuro ya no tendrá que utilizar la etiqueta <font>. En su lugar, bastará con asignar el formato base mediante CSS.
+
+                    h3 {
+                    font-family: Arial;
+                    font-size: 1.3em;
+                     color:  #454545;
+                    }
+
+                    Ahora esta instrucción es válida para todos los títulos de nivel tres <h3> del documento completo. Así, el código HTML se mantiene limpio y claro.
+                </P>
+                <h3>Un texto cualquiera</h3>
+                <P>
+                    En los apartados siguientes veremos cómo se definen estas reglas algunas variaciones de las mismas y cómo se integran en la página Web.
+                </P>
+                    <h3>Sintaxis</h3>
+                <P>
+                    Las hojas de estilo constan, normalmente, de una serie de instrucciones de estilo que definen cómo se han de representar determinados elementos de página. Los elementos de página se identifican normalmente mediante etiquetas HTML.
+                </P>
+                    <h3>ESTRUCTURA DE LAS INSTRUCCIONES DE ESTILO</h3>
+                <P>
+                    Toda instrucción de estilo consta de dos partes:
+
+                    El selector (el elemento que se ha de modificar) La declaración, siempre va entre llaves y consta, a su vez, de dos partes: La propiedad (por ejemplo, color)
+                    El valor correspondiente a la misma.
+                    Estructura de una instrucción en CSS
+                    La propiedad y el valor se escriben separados por dos puntos. El valor indicado siempre depende de la propiedad elegida. Algunas propiedades requieres una medida de longitud (por ejemplo 20px), otras una indicación de color (por ejemplo #000000). Existen, además, una selección de palabras clave previamente definidas (por ejemplo left y right).
+
+                    Una instrucción de estilo válida podría ser, por ejemplo:
+                    h1 {color: #000066;}
+
+                    Esta instrucción determina que a todos los títulos de primer nivel se les asigne el color azul oscuro (#000066). EL color viene definido aquí por un valor hexadecimal como los que ya conoce del lenguaje HTML.
+
+                    Es perfectamente posible incluir varias declaraciones en una sola instrucción (pares propiedad/valor), en cuyo caso habrá que escribir cada par separado por un punto y coma (;), por ejemplo:
+                </P>
+                    <h3>ESTRUCTURA DE LAS INSTRUCCIONES DE ESTILO</h3>
+                <P>
+                    h1 {
+                    background-color: #c0c0c0;
+                    color: #000066;
+                    }
+
+                    Ahora a cada título se le asigna, además, un fondo azul claro.
+
+                    En principio se podrían escribir todas las declaraciones en una sola línea, pero si asignamos muchas declaraciones a un selector perdemos rápidamente en claridad. Por eso hemos dado preferencia al tipo de escritura mostrada aquí.
+
+                    Un punto discutible es si la instrucción de una serie, o una sola instrucción aislada, deben finalizarse con un punto y coma. La buena práctica nos dice que resulta bastante claro e impide posibles errores en el caso de una ampliación o de una nueva ordenación del bloque de estilo.
+
+                    Ahora ampliaremos el ejemplo para demostrar el uso de otras propiedades y posibles valores:
+
+                    h1 {
+                    font-size: 200%;
+                    font-style: italic;
+                    background-color: #c0c0c0;
+                    color: #000066;
+                    }
+
+                    Con font-size: determinamos el tamaño de la fuente, por ejemplo asignando un valor porcentual. Además, mediante Font-style: itlalic el título se escribirá en cursiva.
+                </P>
+                               
+            </Article>
+            
+        </section>
+        <aside class="menu2">
+
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUniversidadUNAD%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <a class="twitter-timeline" href="https://twitter.com/UniversidadUNAD?ref_src=twsrc%5Etfw">Tweets by UniversidadUNAD</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+        </aside>
+
+
+    </main>
+    
+    <footer>
+        <p>
+            Estudiente : Jesus Antonio Gonzalez
+        </p>
+        <p>
+            Correo : jagonzalezberna@unadvirtual.edu.co
+        </p>
+        <p>
+            Skype:jesusantonio_gb
+        </p>
+        <p>
+            Universidad Nacional Abierta y a Distancia UNAD de Colombia 
+        </p>
+
+        <p>
+           
+               Línea anticorrupción: 601-3443700 ext. 1544
+               En Bogotá D.C. (Colombia) Teléfono: 601-375 9500 - Línea gratuita nacional: 01 8000 115223
+               Institución de Educación Superior sujeta a inspección y vigilancia por el Ministerio de Educación Nacional
+
+        </p>
+        <p>
+            Fecha Actualizacion : 06/08/2022
+        </p>
+
+    </footer>
+    <header>
+        
+    </header>
+
+</body>
+</html>
